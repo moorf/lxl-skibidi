@@ -116,8 +116,6 @@ typedef struct RenFont {
     FT_Face face;
     CharMap charmap;
     GlyphMap glyphs;
-    unsigned int ascii_glyph_ids[128];
-    GlyphMetric* ascii_metrics[128][3]; // [codepoint][bitmap_idx], 3 = max subpixel bitmaps
 #ifdef LITE_USE_SDL_RENDERER
     int scale;
 #endif
@@ -213,16 +211,7 @@ static int font_set_style(FT_Outline* outline, int x_translation, unsigned char 
 static unsigned int font_get_glyph_id(RenFont* font, unsigned int codepoint) {
     if (codepoint > MAX_UNICODE) return 0;
 
-    // flat array for ASCII — single indexed load, no pointer chase
-    if (codepoint < ASCII_CACHE_SIZE) {
-        unsigned int cached = font->ascii_glyph_ids[codepoint];
-        if (cached != 0)
-            return cached == (unsigned int)-1 ? 0 : cached;
-        // cold: load and store
-        unsigned int glyph_id = FT_Get_Char_Index(font->face, codepoint);
-        font->ascii_glyph_ids[codepoint] = glyph_id ? glyph_id : (unsigned int)-1;
-        return glyph_id;
-    }
+
 
     size_t row = codepoint / CHARMAP_COL;
     size_t col = codepoint - (row * CHARMAP_COL);
@@ -311,14 +300,9 @@ static GlyphMetric* font_load_glyph_metric(RenFont* font,
     unsigned int glyph_id,
     unsigned int bitmap_idx)
 {
-    // Fast ASCII path
-    if (glyph_id < 128 && bitmap_idx < 3) {
-        GlyphMetric* cached = font->ascii_metrics[glyph_id][bitmap_idx];
-        if (cached) return cached;
-    }
 
     // Compute row/col using bit ops (GLYPHMAP_COL = 512)
-    const unsigned int row = glyph_id >> 9;
+    const unsigned int row = glyph_id / GLYPHMAP_COL;
     const unsigned int col = glyph_id & (GLYPHMAP_COL - 1);
 
     GlyphMetric** metrics0 = font->glyphs.metrics[0];
@@ -327,8 +311,6 @@ static GlyphMetric* font_load_glyph_metric(RenFont* font,
     // Fast exit if already initialized
     if (row0 && (row0[col].flags & EGlyphXAdvance)) {
         GlyphMetric* result = &font->glyphs.metrics[bitmap_idx][row][col];
-        if (glyph_id < 128 && bitmap_idx < 3)
-            font->ascii_metrics[glyph_id][bitmap_idx] = result;
         return result;
     }
 
@@ -356,8 +338,6 @@ static GlyphMetric* font_load_glyph_metric(RenFont* font,
         metric->flags |= EGlyphXAdvance;
         metric->xadvance = xadvance;
 
-        if (glyph_id < 128 && i < 3)
-            font->ascii_metrics[glyph_id][i] = metric;
     }
 
     return &font->glyphs.metrics[bitmap_idx][row][col];
@@ -1042,8 +1022,10 @@ typedef struct {
 #define LAYOUT_CACHE_SIZE 1024
 
 typedef struct RenLayoutCacheEntry {
-    uint32_t hash;
+    uint32_t hash;        // text hash
+    uint32_t font_hash;   // font signature hash
     size_t len;
+    RenTab tab;
 
     RenInternalLayout layout;
     bool valid;
@@ -1128,7 +1110,30 @@ static RenLayoutCacheEntry* get_cache_entry(
 
     return victim;
 }
+static uint32_t hash_font_group(RenFont** fonts)
+{
+    uint32_t h = 2166136261u;
 
+    for (int i = 0; i < FONT_FALLBACK_MAX && fonts[i]; i++) {
+        RenFont* f = fonts[i];
+
+        const char* name = f->face->family_name ? f->face->family_name : "";
+
+        for (const char* p = name; *p; p++)
+            h = (h ^ (unsigned char)*p) * 16777619u;
+
+        h = (h ^ (uint32_t)(f->size * 1000)) * 16777619u;
+        h = (h ^ (uint32_t)f->style) * 16777619u;
+        h = (h ^ (uint32_t)f->antialiasing) * 16777619u;
+        h = (h ^ (uint32_t)f->hinting) * 16777619u;
+
+#ifdef LITE_USE_SDL_RENDERER
+        h = (h ^ (uint32_t)f->scale) * 16777619u;
+#endif
+    }
+
+    return h;
+}
 static void build_internal_layout(
     RenInternalLayout* lc,
     RenFont** fonts,
@@ -1151,8 +1156,10 @@ static void build_internal_layout(
         SDL_Surface* surface = NULL;
         GlyphMetric* metric = NULL;
 
+        int subpixel_idx = (int)(fmod(pen_x, 1.0) * SUBPIXEL_BITMAPS_CACHED);
+
         RenFont* font =
-            font_group_get_glyph(fonts, codepoint, 0, &surface, &metric);
+            font_group_get_glyph(fonts, codepoint, subpixel_idx, &surface, &metric);
 
         if (!metric)
             continue;
@@ -1173,12 +1180,12 @@ static void build_internal_layout(
 
         lc->count++;
 
-        pen_x += font_get_xadvance(font, codepoint, metric, pen_x, (RenTab) { 0 });
+        pen_x += font_get_xadvance(font, codepoint, metric, pen_x, tab);
         //pen_x += font_get_xadvance(font, codepoint, metric, pen_x, tab);
     }
 
     lc->width = pen_x;
-    lc->text = text - len;
+    //lc->text = text - len;
     lc->len = len;
     lc->fonts = fonts;
 }
@@ -1219,7 +1226,7 @@ void ren_layout_text(
           .x = pen_x,
           .codepoint = codepoint
         };
-        pen_x += font_get_xadvance(font, codepoint, metric, pen_x, (RenTab) { 0 });
+        pen_x += font_get_xadvance(font, codepoint, metric, pen_x, tab);
         //pen_x += font_get_xadvance(font, codepoint, metric, pen_x, tab);
     }
 
@@ -1501,28 +1508,25 @@ double ren_draw_text(
     RenColor color,
     RenTab tab)
 {
-    uint32_t hash = fast_hash_partial(text, len);
+    uint32_t text_hash = fast_hash(text, len);
+    uint32_t font_hash = hash_font_group(fonts);
 
     RenLayoutCacheEntry* entry =
-        get_cache_entry(hash, len, fonts, tab);
+        get_cache_entry(text_hash, len, fonts, tab);
 
     if (!entry->valid ||
-        entry->hash != hash ||
-        entry->len != len
-        //entry->fonts != fonts ||
-        //entry->tab.offset != tab.offset
-        )
+        entry->hash != text_hash ||
+        entry->len != len ||
+        entry->font_hash != font_hash ||
+        entry->tab.offset != tab.offset)
     {
-        //printf("text: "); for (int i = 0; i < 10; i++) {
-        //    printf("%c", text[i]);
-        //} printf("\n");
         build_internal_layout(&entry->layout, fonts, text, len, tab);
 
-        entry->hash = hash;
+        entry->hash = text_hash;
+        entry->font_hash = font_hash;
         entry->len = len;
-        //entry->fonts = fonts;
+        entry->tab = tab;
         entry->valid = true;
-        //entry->tab = tab;   
     }
 
     ren_draw_internal_layout(rs, fonts, &entry->layout, x, y, color);
@@ -1536,25 +1540,25 @@ double ren_font_group_get_width(
     size_t len,
     RenTab tab,
     int* x_offset) {
-    uint32_t hash = fast_hash_partial(text, len);
+    uint32_t text_hash = fast_hash(text, len);
+    uint32_t font_hash = hash_font_group(fonts);
 
     RenLayoutCacheEntry* entry =
-        get_cache_entry(hash, len, fonts, tab);
+        get_cache_entry(text_hash, len, fonts, tab);
 
     if (!entry->valid ||
-        entry->hash != hash ||
-        entry->len != len
-        //entry->fonts != fonts ||
-        //entry->tab.offset != tab.offset
-        )
+        entry->hash != text_hash ||
+        entry->len != len ||
+        entry->font_hash != font_hash ||
+        entry->tab.offset != tab.offset)
     {
         build_internal_layout(&entry->layout, fonts, text, len, tab);
 
-        entry->hash = hash;
+        entry->hash = text_hash;
+        entry->font_hash = font_hash;
         entry->len = len;
-        //entry->fonts = fonts;
+        entry->tab = tab;
         entry->valid = true;
-        //entry->tab = tab;
     }
 
     /* Handle x_offset */
