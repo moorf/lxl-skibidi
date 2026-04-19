@@ -1,0 +1,1016 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:116 (project)"
+    message: |
+      The system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:116 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 
+      Build flags: /nologo;/DWIN32;/D_WINDOWS;/utf-8;/MP
+      Id flags:  
+      
+      The output was:
+      0
+      CMakeCCompilerId.c
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/3.31.6-msvc6/CompilerIdC/CMakeCCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:116 (project)"
+    message: |
+      Detecting C compiler /showIncludes prefix:
+        main.c
+        Note: including file: C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:116 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-2u5c32"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-2u5c32"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-2u5c32'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_5cc0a
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_5cc0a.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_5cc0a.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_5cc0a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_5cc0a.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_5cc0a.exe /implib:cmTC_5cc0a.lib /pdb:cmTC_5cc0a.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:116 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:116 (project)"
+    message: |
+      Running the C compiler's linker: "C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35217.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:156 (check_include_file)"
+    checks:
+      - "Looking for assert.h"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-65nheu"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-65nheu"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_ASSERT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-65nheu'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_0cf8a
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_0cf8a.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_0cf8a.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-65nheu\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_0cf8a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_0cf8a.dir\\CheckIncludeFile.c.obj  /out:cmTC_0cf8a.exe /implib:cmTC_0cf8a.lib /pdb:cmTC_0cf8a.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:157 (check_include_file)"
+    checks:
+      - "Looking for dirent.h"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-g3q3nt"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-g3q3nt"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_DIRENT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-g3q3nt'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_ab7e4
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_ab7e4.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_ab7e4.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-g3q3nt\\CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_ab7e4.dir/CheckIncludeFile.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_ab7e4.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_ab7e4.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-g3q3nt\\CheckIncludeFile.c
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-g3q3nt\\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'dirent.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:158 (check_include_file)"
+    checks:
+      - "Looking for sys/stat.h"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-xp1qig"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-xp1qig"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_SYS_STAT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-xp1qig'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_621c4
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_621c4.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_621c4.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-xp1qig\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_621c4.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_621c4.dir\\CheckIncludeFile.c.obj  /out:cmTC_621c4.exe /implib:cmTC_621c4.lib /pdb:cmTC_621c4.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:159 (check_include_file)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-c3rcl9"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-c3rcl9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-c3rcl9'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_e67e2
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_e67e2.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_e67e2.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-c3rcl9\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_e67e2.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_e67e2.dir\\CheckIncludeFile.c.obj  /out:cmTC_e67e2.exe /implib:cmTC_e67e2.lib /pdb:cmTC_e67e2.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:160 (check_include_file)"
+    checks:
+      - "Looking for unistd.h"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-q4no81"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-q4no81"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_UNISTD_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-q4no81'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_c38e7
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_c38e7.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_c38e7.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-q4no81\\CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_c38e7.dir/CheckIncludeFile.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_c38e7.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_c38e7.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-q4no81\\CheckIncludeFile.c
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-q4no81\\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:161 (check_include_file)"
+    checks:
+      - "Looking for windows.h"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-6hhqeh"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-6hhqeh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_WINDOWS_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-6hhqeh'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_b1101
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_b1101.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_b1101.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-6hhqeh\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_b1101.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b1101.dir\\CheckIncludeFile.c.obj  /out:cmTC_b1101.exe /implib:cmTC_b1101.lib /pdb:cmTC_b1101.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:163 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:68 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:163 (check_symbol_exists)"
+    checks:
+      - "Looking for bcopy"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-nfj1u5"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-nfj1u5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_BCOPY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-nfj1u5'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_29168
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_29168.dir\\CheckSymbolExists.c.obj /FdCMakeFiles\\cmTC_29168.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-nfj1u5\\CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_29168.dir/CheckSymbolExists.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_29168.dir\\CheckSymbolExists.c.obj /FdCMakeFiles\\cmTC_29168.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-nfj1u5\\CheckSymbolExists.c
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-nfj1u5\\CheckSymbolExists.c(2): fatal error C1083: Cannot open include file: 'strings.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:163 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:68 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:164 (check_symbol_exists)"
+    checks:
+      - "Looking for memfd_create"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-kd8r83"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-kd8r83"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_MEMFD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-kd8r83'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_8d326
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_8d326.dir\\CheckSymbolExists.c.obj /FdCMakeFiles\\cmTC_8d326.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-kd8r83\\CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_8d326.dir/CheckSymbolExists.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_8d326.dir\\CheckSymbolExists.c.obj /FdCMakeFiles\\cmTC_8d326.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-kd8r83\\CheckSymbolExists.c
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-kd8r83\\CheckSymbolExists.c(2): fatal error C1083: Cannot open include file: 'sys/mman.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:163 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:68 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:165 (check_symbol_exists)"
+    checks:
+      - "Looking for memmove"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-mvn1rn"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-mvn1rn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_MEMMOVE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-mvn1rn'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_a290c
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_a290c.dir\\CheckSymbolExists.c.obj /FdCMakeFiles\\cmTC_a290c.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-mvn1rn\\CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_a290c.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_a290c.dir\\CheckSymbolExists.c.obj  /out:cmTC_a290c.exe /implib:cmTC_a290c.lib /pdb:cmTC_a290c.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:163 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:68 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:166 (check_symbol_exists)"
+    checks:
+      - "Looking for secure_getenv"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-re63z6"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-re63z6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_SECURE_GETENV"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-re63z6'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_ae92c
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_ae92c.dir\\CheckSymbolExists.c.obj /FdCMakeFiles\\cmTC_ae92c.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-re63z6\\CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_ae92c.dir/CheckSymbolExists.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_ae92c.dir\\CheckSymbolExists.c.obj /FdCMakeFiles\\cmTC_ae92c.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-re63z6\\CheckSymbolExists.c
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-re63z6\\CheckSymbolExists.c(8): error C2065: 'secure_getenv': undeclared identifier
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:163 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:68 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:167 (check_symbol_exists)"
+    checks:
+      - "Looking for strerror"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-8567gc"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-8567gc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_STRERROR"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-8567gc'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_0f51a
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_0f51a.dir\\CheckSymbolExists.c.obj /FdCMakeFiles\\cmTC_0f51a.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-8567gc\\CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_0f51a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_0f51a.dir\\CheckSymbolExists.c.obj  /out:cmTC_0f51a.exe /implib:cmTC_0f51a.lib /pdb:cmTC_0f51a.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:169 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_REALPATH"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-kp5s9c"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-kp5s9c"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_REALPATH"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-kp5s9c'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_aa18e
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_REALPATH  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_aa18e.dir\\src.c.obj /FdCMakeFiles\\cmTC_aa18e.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-kp5s9c\\src.c
+        FAILED: CMakeFiles/cmTC_aa18e.dir/src.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_REALPATH  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_aa18e.dir\\src.c.obj /FdCMakeFiles\\cmTC_aa18e.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-kp5s9c\\src.c
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-kp5s9c\\src.c(3): error C2065: 'PATH_MAX': undeclared identifier
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-kp5s9c\\src.c(3): error C2057: expected constant expression
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-kp5s9c\\src.c(3): error C2466: cannot allocate an array of constant size 0
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-kp5s9c\\src.c(3): error C2133: 'buf': unknown size
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:183 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_ATTRIBUTE_UNINITIALIZED"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-48ggr6"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-48ggr6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_ATTRIBUTE_UNINITIALIZED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-48ggr6'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_076aa
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_ATTRIBUTE_UNINITIALIZED  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_076aa.dir\\src.c.obj /FdCMakeFiles\\cmTC_076aa.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-48ggr6\\src.c
+        FAILED: CMakeFiles/cmTC_076aa.dir/src.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_ATTRIBUTE_UNINITIALIZED  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_076aa.dir\\src.c.obj /FdCMakeFiles\\cmTC_076aa.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-48ggr6\\src.c
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-48ggr6\\src.c(1): error C2146: syntax error: missing ';' before identifier '__attribute__'
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-48ggr6\\src.c(1): error C2065: 'uninitialized': undeclared identifier
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:188 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_VISIBILITY"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-cfwm91"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-cfwm91"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-cfwm91'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_0f7bb
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_VISIBILITY  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_0f7bb.dir\\src.c.obj /FdCMakeFiles\\cmTC_0f7bb.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-cfwm91\\src.c
+        FAILED: CMakeFiles/cmTC_0f7bb.dir/src.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_VISIBILITY  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_0f7bb.dir\\src.c.obj /FdCMakeFiles\\cmTC_0f7bb.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-cfwm91\\src.c
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-cfwm91\\src.c(1): error C2143: syntax error: missing ')' before '('
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-cfwm91\\src.c(1): error C2143: syntax error: missing ')' before '('
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-cfwm91\\src.c(1): error C2091: function returns function
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-cfwm91\\src.c(1): error C2143: syntax error: missing ')' before 'string'
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-cfwm91\\src.c(1): error C2143: syntax error: missing '{' before 'string'
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-cfwm91\\src.c(1): error C2059: syntax error: 'string'
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-cfwm91\\src.c(1): error C2059: syntax error: ')'
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-cfwm91\\src.c(1): error C2059: syntax error: ')'
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-cfwm91\\src.c(1): error C2059: syntax error: ')'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:199 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BUILTIN_ASSUME"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-513lsv"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-513lsv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_BUILTIN_ASSUME"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-513lsv'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_4d7c0
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_BUILTIN_ASSUME  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_4d7c0.dir\\src.c.obj /FdCMakeFiles\\cmTC_4d7c0.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-513lsv\\src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_4d7c0.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_4d7c0.dir\\src.c.obj  /out:cmTC_4d7c0.exe /implib:cmTC_4d7c0.lib /pdb:cmTC_4d7c0.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:201 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BUILTIN_MUL_OVERFLOW"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-pkl51w"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-pkl51w"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_BUILTIN_MUL_OVERFLOW"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-pkl51w'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_167db
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_BUILTIN_MUL_OVERFLOW  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_167db.dir\\src.c.obj /FdCMakeFiles\\cmTC_167db.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-pkl51w\\src.c
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-pkl51w\\src.c(2) : warning C4700: uninitialized local variable 'b' used
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-pkl51w\\src.c(2) : warning C4700: uninitialized local variable 'a' used
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_167db.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_167db.dir\\src.c.obj  /out:cmTC_167db.exe /implib:cmTC_167db.lib /pdb:cmTC_167db.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_167db.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_167db.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_167db.dir\\src.c.obj  /out:cmTC_167db.exe /implib:cmTC_167db.lib /pdb:cmTC_167db.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_167db.dir\\src.c.obj /out:cmTC_167db.exe /implib:cmTC_167db.lib /pdb:cmTC_167db.pdb /version:0.0 /machine:x64 /nologo /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_167db.dir/intermediate.manifest CMakeFiles\\cmTC_167db.dir/manifest.res" failed (exit code 1120) with the following output:
+        src.c.obj : error LNK2019: unresolved external symbol __builtin_mul_overflow referenced in function main\x0d
+        cmTC_167db.exe : fatal error LNK1120: 1 unresolved externals\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:209 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BUILTIN_UNREACHABLE"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-tpl3hv"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-tpl3hv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_BUILTIN_UNREACHABLE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-tpl3hv'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_2e6ba
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DHAVE_BUILTIN_UNREACHABLE  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_2e6ba.dir\\src.c.obj /FdCMakeFiles\\cmTC_2e6ba.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-tpl3hv\\src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_2e6ba.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_2e6ba.dir\\src.c.obj  /out:cmTC_2e6ba.exe /implib:cmTC_2e6ba.lib /pdb:cmTC_2e6ba.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_2e6ba.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_2e6ba.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_2e6ba.dir\\src.c.obj  /out:cmTC_2e6ba.exe /implib:cmTC_2e6ba.lib /pdb:cmTC_2e6ba.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_2e6ba.dir\\src.c.obj /out:cmTC_2e6ba.exe /implib:cmTC_2e6ba.lib /pdb:cmTC_2e6ba.pdb /version:0.0 /machine:x64 /nologo /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_2e6ba.dir/intermediate.manifest CMakeFiles\\cmTC_2e6ba.dir/manifest.res" failed (exit code 1120) with the following output:
+        src.c.obj : error LNK2019: unresolved external symbol __builtin_unreachable referenced in function main\x0d
+        cmTC_2e6ba.exe : fatal error LNK1120: 1 unresolved externals\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:224 (check_c_source_compiles)"
+    checks:
+      - "Performing Test INTEL_CET_ENABLED"
+    directories:
+      source: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-j0zr4g"
+      binary: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-j0zr4g"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/src/cre2-10.46-1e90546362.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg"
+    buildResult:
+      variable: "INTEL_CET_ENABLED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-j0zr4g'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_16696
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DINTEL_CET_ENABLED  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_16696.dir\\src.c.obj /FdCMakeFiles\\cmTC_16696.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-j0zr4g\\src.c
+        FAILED: CMakeFiles/cmTC_16696.dir/src.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DINTEL_CET_ENABLED  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_16696.dir\\src.c.obj /FdCMakeFiles\\cmTC_16696.dir\\ /FS -c C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-j0zr4g\\src.c
+        C:\\Users\\Bodya\\source\\repos\\lxl-skibidi\\vcpkg_installed\\x64-windows\\vcpkg\\blds\\pcre2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-j0zr4g\\src.c(2): fatal error C1189: #error:  CET is not enabled
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...

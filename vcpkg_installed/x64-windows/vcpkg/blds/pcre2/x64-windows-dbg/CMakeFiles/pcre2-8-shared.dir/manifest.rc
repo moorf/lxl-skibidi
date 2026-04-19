@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+2 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-dbg/CMakeFiles/pcre2-8-shared.dir/embed.manifest"

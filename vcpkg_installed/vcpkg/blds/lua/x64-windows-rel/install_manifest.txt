@@ -1,0 +1,9 @@
+C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/pkgs/lua_x64-windows/lib/lua.lib
+C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/pkgs/lua_x64-windows/bin/lua.dll
+C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/pkgs/lua_x64-windows/share/unofficial-lua/unofficial-lua-config.cmake
+C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/pkgs/lua_x64-windows/share/unofficial-lua/unofficial-lua-config-release.cmake
+C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/pkgs/lua_x64-windows/include/lualib.h
+C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/pkgs/lua_x64-windows/include/lua.h
+C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/pkgs/lua_x64-windows/include/luaconf.h
+C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/pkgs/lua_x64-windows/include/lauxlib.h
+C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/pkgs/lua_x64-windows/include/lua.hpp

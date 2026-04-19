@@ -1,0 +1,9 @@
+{
+  "name": "lxl-skibidi",
+  "version": "1.0.0",
+  "dependencies": [
+    "freetype",
+    "sdl3",
+    "pcre2"
+  ]
+}
