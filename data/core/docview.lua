@@ -70,6 +70,8 @@ function DocView:new(doc)
   self.v_scrollbar:set_forced_status(config.force_scrollbar_status)
   self.h_scrollbar:set_forced_status(config.force_scrollbar_status)
   self._col_x_cache = {}
+  self._layout_cache = {}
+  self._width_opts = { tab_offset = 0 }
 end
 
 
@@ -240,8 +242,244 @@ function DocView:_build_line_layout(line)
   self._layout_cache[line] = cache
   return cache
 end
+function DocView:get_x_offset_col(line, x)
+  local line_text = self.doc.lines[line]
+  local cache = self._layout_cache[line]
 
-function DocView:get_x_offset_col(line, target_x)
+  local default_font = self:get_font()
+  local _, indent_size = self.doc:get_indent_info()
+  default_font:set_tab_size(indent_size)
+
+  -- rebuild cache if needed
+  if not cache then
+    cache = {
+      text = line_text,
+      tokens = {},
+      cumulative_widths = {},
+      total_width = 0,
+      char_count = #line_text
+    }
+
+    local xoffset = 0
+    local opts = self._width_opts
+
+    for _, type, text in self.doc.highlighter:each_token(line) do
+      local font = style.syntax_fonts[type] or default_font
+      if font ~= default_font then
+        font:set_tab_size(indent_size)
+      end
+
+      opts.tab_offset = xoffset
+      local width = font:get_width(text, opts)
+
+      table.insert(cache.tokens, {
+        text = text,
+        font = font,
+        start_x = xoffset,
+        width = width
+      })
+
+      xoffset = xoffset + width
+      table.insert(cache.cumulative_widths, xoffset)
+    end
+
+    cache.total_width = xoffset
+    self._layout_cache[line] = cache
+  end
+
+  -- ✅ Early exits
+  if x <= 0 then
+    return 1
+  end
+
+  if x >= cache.total_width then
+    return #line_text
+  end
+
+  ------------------------------------------------------------------
+  -- ✅ LONG LINE FAST MODE (CRITICAL)
+  ------------------------------------------------------------------
+  if cache.char_count > 10000 then
+    -- approximate column directly
+    local avg = cache.total_width / cache.char_count
+    local col = math.floor(x / avg)
+
+    if col < 1 then col = 1 end
+    if col > cache.char_count then col = cache.char_count end
+
+    return col
+  end
+  ------------------------------------------------------------------
+
+  -- ✅ Binary search token by cumulative width
+  local lo, hi = 1, #cache.cumulative_widths
+  local token_index = hi
+
+  while lo <= hi do
+    local mid = (lo + hi) // 2
+    if cache.cumulative_widths[mid] >= x then
+      token_index = mid
+      hi = mid - 1
+    else
+      lo = mid + 1
+    end
+  end
+
+  local token = cache.tokens[token_index]
+  local xoffset = token.start_x
+  local i = 1
+
+  -- compute starting character index
+  for j = 1, token_index - 1 do
+    i = i + #cache.tokens[j].text
+  end
+
+  -- walk only inside this token
+  local opts = self._width_opts
+  for char in common.utf8_chars(token.text) do
+    opts.tab_offset = xoffset
+    local w = token.font:get_width(char, opts)
+
+    if xoffset + w >= x then
+      return (x <= xoffset + (w / 2)) and i or i + #char
+    end
+
+    xoffset = xoffset + w
+    i = i + #char
+  end
+
+  return #line_text
+end
+
+function DocView:dget_x_offset_col(line, x)
+  print(x)
+   --string.sub(line, 1, 10)
+  
+  local line_text = self.doc.lines[line]
+  local cache = self._layout_cache[line]
+  --print(line_text)
+  local default_font = self:get_font()
+  local _, indent_size = self.doc:get_indent_info()
+  default_font:set_tab_size(indent_size)
+  -- rebuild cache if needed
+  if cache then
+    print(cache and "HIT" or "MISS")
+    print(string.sub(cache.text, 1, 10))
+  end
+  print(string.sub(line_text, 1, 10))
+  print(string.sub(line, 1, 10))
+  if not cache then
+    cache = {
+      text = line_text,
+      tokens = {},
+      cumulative_widths = {},
+      total_width = 0
+    }
+
+    local xoffset = 0
+    local opts = self._width_opts
+
+    for _, type, text in self.doc.highlighter:each_token(line) do
+      local font = style.syntax_fonts[type] or default_font
+      if font ~= default_font then
+        font:set_tab_size(indent_size)
+      end
+
+      opts.tab_offset = xoffset
+      local width = font:get_width(text, opts)
+
+      table.insert(cache.tokens, {
+        text = text,
+        font = font,
+        start_x = xoffset,
+        width = width
+      })
+
+      xoffset = xoffset + width
+      table.insert(cache.cumulative_widths, xoffset)
+    end
+
+    cache.total_width = xoffset
+    self._layout_cache[line] = cache
+  end
+
+  -- early exit if past end of line
+  if x >= cache.total_width then
+    return #line_text
+  end
+
+  -- ✅ Binary search token by cumulative width
+  local lo, hi = 1, #cache.cumulative_widths
+  local token_index = hi
+
+  while lo <= hi do
+    local mid = math.floor((lo + hi) / 2)
+    if cache.cumulative_widths[mid] >= x then
+      token_index = mid
+      hi = mid - 1
+    else
+      lo = mid + 1
+    end
+  end
+
+  local token = cache.tokens[token_index]
+  local xoffset = token.start_x
+  local i = 1
+
+  -- compute starting character index
+  for j = 1, token_index - 1 do
+    i = i + #cache.tokens[j].text
+  end
+
+  -- ✅ only walk characters inside matched token
+  local opts = self._width_opts
+  for char in common.utf8_chars(token.text) do
+    opts.tab_offset = xoffset
+    local w = token.font:get_width(char, opts)
+
+    if xoffset + w >= x then
+      return (x <= xoffset + (w / 2)) and i or i + #char
+    end
+
+    xoffset = xoffset + w
+    i = i + #char
+  end
+
+  return #line_text
+end
+
+function DocView:get_x_offset_col_original(line, x)
+  local line_text = self.doc.lines[line]
+
+  local xoffset, i = 0, 1
+  local default_font = self:get_font()
+  local _, indent_size = self.doc:get_indent_info()
+  default_font:set_tab_size(indent_size)
+  for _, type, text in self.doc.highlighter:each_token(line) do
+    local font = style.syntax_fonts[type] or default_font
+    if font ~= default_font then font:set_tab_size(indent_size) end
+    local width = font:get_width(text, {tab_offset = xoffset})
+    -- Don't take the shortcut if the width matches x,
+    -- because we need last_i which should be calculated using utf-8.
+    if xoffset + width < x then
+      xoffset = xoffset + width
+      i = i + #text
+    else
+      for char in common.utf8_chars(text) do
+        local w = font:get_width(char, {tab_offset = xoffset})
+        if xoffset + w >= x then
+          return (x <= xoffset + (w / 2)) and i or i + #char
+        end
+        xoffset = xoffset + w
+        i = i + #char
+      end
+    end
+  end
+
+  return #line_text
+end
+
+function DocView:get_x_offset_col2(line, target_x)
   self._layout_cache = self._layout_cache or {}
 
   local cache = self._layout_cache[line]
