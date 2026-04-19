@@ -68,8 +68,38 @@ function Doc:set_filename(filename, abs_filename)
   self.abs_filename = abs_filename
   self:reset_syntax()
 end
-
 function Doc:load(filename)
+  local fp = assert(io.open(filename, "rb"))
+  local content = fp:read("*a")
+  fp:close()
+
+  self:reset()
+
+  self.crlf = content:find("\r\n", 1, true) ~= nil
+  self.lines = {}
+
+  local pos = 1
+  while true do
+    local nl = content:find("\n", pos, true)
+    if not nl then break end
+    self.lines[#self.lines + 1] = content:sub(pos, nl)
+    pos = nl + 1
+  end
+
+  if pos <= #content then
+    self.lines[#self.lines + 1] = content:sub(pos) .. "\n"
+  end
+
+  if #self.lines == 0 then
+    self.lines[1] = "\n"
+  end
+
+  -- Reset highlighter lazily
+  self.highlighter.lines = {}
+
+  self:reset_syntax()
+end
+function Doc:loadcac(filename)
   self:reset()
 
   self.filename = filename
@@ -141,6 +171,46 @@ function Doc:reload()
 end
 
 function Doc:save(filename, abs_filename)
+  if not filename then
+    assert(self.filename, "no filename set to default to")
+    filename = self.filename
+    abs_filename = self.abs_filename
+  else
+    assert(self.filename or abs_filename, "calling save on unnamed doc without absolute path")
+  end
+
+  local fp
+  if PLATFORM == "Windows" then
+    -- On Windows, opening a hidden file with wb fails with a permission error.
+    -- To get around this, we must open the file as r+b and truncate.
+    -- Since r+b fails if file doesn't exist, fall back to wb.
+    fp = io.open(abs_filename, "r+b")
+    if fp then
+      system.ftruncate(fp)
+    else
+      -- file probably doesn't exist, create one
+      fp = assert (io.open(abs_filename, "wb"))
+    end
+  else
+    fp = assert (io.open(abs_filename, "wb"))
+  end
+
+  for _, line in ipairs(self.lines) do
+    if self.crlf then
+      line = line:gsub("\r?\n", "\r\n")
+    end
+    fp:write(line)
+  end
+  fp:close()
+  self:set_filename(filename, abs_filename)
+  self.new_file = false
+  self:clean()
+end
+
+function Doc:get_name()
+  return self.filename or "unsaved"
+end
+function Doc:savecac(filename, abs_filename)
   if not filename then
     assert(self.filename, "no filename set to default to")
     filename = self.filename
