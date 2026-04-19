@@ -439,7 +439,7 @@ static RenFont *font_group_get_glyph(RenFont **fonts, unsigned int codepoint, in
 }
 
 static void font_clear_glyph_cache(RenFont* font) {
-    return;
+
   for (int glyph_format_idx = 0; glyph_format_idx < EGlyphFormatSize; glyph_format_idx++) {
     for (int atlas_idx = 0; atlas_idx < font->glyphs.natlas[glyph_format_idx]; atlas_idx++) {
       GlyphAtlas *atlas = &font->glyphs.atlas[glyph_format_idx][atlas_idx];
@@ -482,8 +482,9 @@ static void font_file_close(FT_Stream stream) {
 }
 
 static int font_set_face_metrics(RenFont *font, FT_Face face) {
+
   FT_Error err;
-  float pixel_size = font->size;
+  float pixel_size = font->size; 
   #ifdef LITE_USE_SDL_RENDERER
   pixel_size *= font->scale;
   #endif
@@ -1118,7 +1119,9 @@ static uint32_t hash_font_group(RenFont** fonts)
         RenFont* f = fonts[i];
 
         const char* name = f->face->family_name ? f->face->family_name : "";
-
+        uint32_t size_bits;
+        memcpy(&size_bits, &f->size, sizeof(uint32_t));
+        h = (h ^ size_bits) * 16777619u;
         for (const char* p = name; *p; p++)
             h = (h ^ (unsigned char)*p) * 16777619u;
 
@@ -1435,7 +1438,6 @@ static void ren_draw_internal_layout(
                 + y
                 - metric->bitmap_top
                 + (fonts[0]->baseline * surface_scale);
-
             if (target_y < clip.y)
                 continue;
             if (target_y >= clip_end_y)
