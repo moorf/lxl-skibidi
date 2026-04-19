@@ -147,9 +147,12 @@ function DocView:get_line_screen_position(line, col)
   local x, y = self:get_content_offset()
   local lh = self:get_line_height()
   local gw = self:get_gutter_width()
-  y = y + (line-1) * lh + style.padding.y
+
+  y = y + (line - 1) * lh + style.padding.y
+
   if col then
-    return x + gw + self:get_col_x_offset(line, col), y
+    local xoffset = self:get_col_x_offset(line, col)
+    return x + gw + xoffset, y
   else
     return x + gw, y
   end
@@ -172,17 +175,8 @@ end
 
 
 function DocView:get_col_x_offset(line, col)
-  local cache = self._col_x_cache[line]
-  if not cache then
-    cache = {}
-    self._col_x_cache[line] = cache
-  end
+  if not col then return 0 end
 
-  if cache[col] then
-    return cache[col]
-  end
-
-  -- original implementation BELOW
   local default_font = self:get_font()
   local _, indent_size = self.doc:get_indent_info()
   default_font:set_tab_size(indent_size)
@@ -192,58 +186,98 @@ function DocView:get_col_x_offset(line, col)
 
   for _, type, text in self.doc.highlighter:each_token(line) do
     local font = style.syntax_fonts[type] or default_font
-    if font ~= default_font then font:set_tab_size(indent_size) end
-    local length = #text
+    if font ~= default_font then
+      font:set_tab_size(indent_size)
+    end
 
-    if column + length <= col then
-      xoffset = xoffset + font:get_width(text, {tab_offset = xoffset})
-      column = column + length
+    local text_len = #text
+
+    -- If entire token is before target column, measure whole token at once
+    if column + text_len <= col then
+      xoffset = xoffset + font:get_width(text, { tab_offset = xoffset })
+      column = column + text_len
     else
-      for char in common.utf8_chars(text) do
-        if column >= col then
-          cache[col] = xoffset
-          return xoffset
-        end
-        xoffset = xoffset + font:get_width(char, {tab_offset = xoffset})
-        column = column + #char
+      -- Only measure partial token
+      local remaining = col - column
+      if remaining > 0 then
+        local partial = text:sub(1, remaining)
+        xoffset = xoffset + font:get_width(partial, { tab_offset = xoffset })
       end
+      return xoffset
     end
   end
 
-  cache[col] = xoffset
   return xoffset
 end
 
+function DocView:_build_line_layout(line)
+  local cache = {}
 
-function DocView:get_x_offset_col(line, x)
-  local line_text = self.doc.lines[line]
-
-  local xoffset, i = 0, 1
   local default_font = self:get_font()
   local _, indent_size = self.doc:get_indent_info()
   default_font:set_tab_size(indent_size)
+
+  local columns = {}
+  local xoffset = 0
+  local column = 1
+
+  columns[column] = 0
+
   for _, type, text in self.doc.highlighter:each_token(line) do
     local font = style.syntax_fonts[type] or default_font
-    if font ~= default_font then font:set_tab_size(indent_size) end
-    local width = font:get_width(text, {tab_offset = xoffset})
-    -- Don't take the shortcut if the width matches x,
-    -- because we need last_i which should be calculated using utf-8.
-    if xoffset + width < x then
-      xoffset = xoffset + width
-      i = i + #text
-    else
-      for char in common.utf8_chars(text) do
-        local w = font:get_width(char, {tab_offset = xoffset})
-        if xoffset + w >= x then
-          return (x <= xoffset + (w / 2)) and i or i + #char
-        end
-        xoffset = xoffset + w
-        i = i + #char
-      end
+    if font ~= default_font then
+      font:set_tab_size(indent_size)
+    end
+
+    for char in common.utf8_chars(text) do
+      xoffset = xoffset + font:get_width(char, { tab_offset = xoffset })
+      column = column + #char
+      columns[column] = xoffset
     end
   end
 
-  return #line_text
+  cache.columns = columns
+  self._layout_cache[line] = cache
+  return cache
+end
+
+function DocView:get_x_offset_col(line, target_x)
+  self._layout_cache = self._layout_cache or {}
+
+  local cache = self._layout_cache[line]
+  if not cache then
+    cache = self:_build_line_layout(line)
+  end
+
+  local columns = cache.columns
+  if not columns or #columns == 0 then
+    return 1
+  end
+
+  -- Binary search for closest column
+  local low, high = 1, #columns
+
+  while low < high do
+    local mid = (low + high) // 2
+    if columns[mid] < target_x then
+      low = mid + 1
+    else
+      high = mid
+    end
+  end
+
+  -- Now low is first column whose x >= target_x
+  local col = low
+
+  -- Snap to nearest side of glyph (preserve original behavior)
+  local prev_x = columns[col - 1] or 0
+  local curr_x = columns[col]
+
+  if target_x <= prev_x + (curr_x - prev_x) / 2 then
+    return col - 1
+  end
+
+  return col
 end
 
 
@@ -275,25 +309,36 @@ function DocView:supports_text_input()
   return true
 end
 
-
 function DocView:scroll_to_make_visible(line, col)
-  local _, oy = self:get_content_offset()
-  local _, ly = self:get_line_screen_position(line, col)
+  local ox, oy = self:get_content_offset()
+  local x, ly = self:get_line_screen_position(line, col)
   local lh = self:get_line_height()
+
   local _, _, _, scroll_h = self.h_scrollbar:get_track_rect()
-  local overscroll = math.min(lh * 2, self.size.y) -- always show the previous / next line when possible
-  self.scroll.to.y = common.clamp(self.scroll.to.y, ly - oy - self.size.y + scroll_h + overscroll, ly - oy - lh)
-  local gw = self:get_gutter_width()
-  local xoffset = self:get_col_x_offset(line, col)
-  local xmargin = 3 * self:get_font():get_width(' ')
-  local xsup = xoffset + gw + xmargin
-  local xinf = xoffset - xmargin
-  local _, _, scroll_w = self.v_scrollbar:get_track_rect()
-  local size_x = math.max(0, self.size.x - scroll_w)
-  if xsup > self.scroll.x + size_x then
-    self.scroll.to.x = xsup - size_x
-  elseif xinf < self.scroll.x then
-    self.scroll.to.x = math.max(0, xinf)
+  local overscroll = math.min(lh * 2, self.size.y)
+
+  self.scroll.to.y = common.clamp(
+    self.scroll.to.y,
+    ly - oy - self.size.y + scroll_h + overscroll,
+    ly - oy - lh
+  )
+
+  if col then
+    local gw = self:get_gutter_width()
+    local xoffset = x - ox - gw  -- reuse computed value
+
+    local xmargin = 3 * self:get_font():get_width(" ")
+    local xsup = xoffset + gw + xmargin
+    local xinf = xoffset - xmargin
+
+    local _, _, scroll_w = self.v_scrollbar:get_track_rect()
+    local size_x = math.max(0, self.size.x - scroll_w)
+
+    if xsup > self.scroll.x + size_x then
+      self.scroll.to.x = xsup - size_x
+    elseif xinf < self.scroll.x then
+      self.scroll.to.x = math.max(0, xinf)
+    end
   end
 end
 
