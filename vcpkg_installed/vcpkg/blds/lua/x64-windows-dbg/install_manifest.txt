@@ -1,4 +1,0 @@
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/pkgs/lua_x64-windows/debug/lib/lua.lib
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/pkgs/lua_x64-windows/debug/bin/lua.dll
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/pkgs/lua_x64-windows/debug/share/unofficial-lua/unofficial-lua-config.cmake
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/pkgs/lua_x64-windows/debug/share/unofficial-lua/unofficial-lua-config-debug.cmake

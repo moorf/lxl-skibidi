@@ -1,6 +1,0 @@
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/blds/lua/x64-windows-dbg/CMakeFiles/lua.dir
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/blds/lua/x64-windows-dbg/CMakeFiles/edit_cache.dir
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/blds/lua/x64-windows-dbg/CMakeFiles/rebuild_cache.dir
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/blds/lua/x64-windows-dbg/CMakeFiles/list_install_components.dir
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/blds/lua/x64-windows-dbg/CMakeFiles/install.dir
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/vcpkg/blds/lua/x64-windows-dbg/CMakeFiles/install/local.dir

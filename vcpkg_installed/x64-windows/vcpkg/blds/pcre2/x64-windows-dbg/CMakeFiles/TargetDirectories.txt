@@ -1,9 +1,0 @@
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-dbg/CMakeFiles/pcre2-8-shared.dir
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-dbg/CMakeFiles/pcre2-posix-shared.dir
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-dbg/CMakeFiles/pcre2-16-shared.dir
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-dbg/CMakeFiles/pcre2-32-shared.dir
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-dbg/CMakeFiles/edit_cache.dir
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-dbg/CMakeFiles/rebuild_cache.dir
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-dbg/CMakeFiles/list_install_components.dir
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-dbg/CMakeFiles/install.dir
-C:/Users/Bodya/source/repos/lxl-skibidi/vcpkg_installed/x64-windows/vcpkg/blds/pcre2/x64-windows-dbg/CMakeFiles/install/local.dir
