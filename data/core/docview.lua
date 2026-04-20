@@ -252,7 +252,7 @@ function DocView:get_x_offset_col(line, target_x)
   local cache = self._layout_cache[line]
 
   -- Rebuild cache if missing or text changed
-  if not cache or cache.text ~= line_text or cache.scale ~= SCALE then
+  if not cache or cache.text ~= line_text or cache.scale ~= SCALE or cache.font_height ~= default_font:get_height() or cache.tab_size ~= indent_size then
     local columns = {}
     local xoffset = 0
     local column = 1
@@ -276,7 +276,9 @@ function DocView:get_x_offset_col(line, target_x)
     cache = {
       text = line_text,
       columns = columns,
-      scale = SCALE
+      scale = SCALE,
+      font_height = default_font:get_height(),
+      tab_size = indent_size
     }
 
     self._layout_cache[line] = cache
