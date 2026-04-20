@@ -170,6 +170,7 @@ syntax.add {
     { pattern = { "^%s*()match%f[%s]",  ":" }, type = { "normal", "keyword" }, syntax = not_python_type },
     { pattern = { "^%s*()case%f[%s]",   ":" }, type = { "normal", "keyword" }, syntax = not_python_type },
     { pattern = { "^%s*()except%f[%s]", ":" }, type = { "normal", "keyword" }, syntax = not_python_type },
+    { pattern = { "^%s*()with%f[%s]",   ":" }, type = { "normal", "keyword" }, syntax = not_python_type },
 
     { pattern =  "else():",                    type = { "keyword", "normal" }                           },
     { pattern =  "try():",                     type = { "keyword", "normal" }                           },
